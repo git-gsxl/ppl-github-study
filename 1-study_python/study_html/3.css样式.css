@@ -1,0 +1,47 @@
+/*注释：解释性的信息*/
+
+/*全局通用的样式*/
+
+/*导航条的样式*/
+
+/*商品列表样式*/
+
+
+h1{font-size:96px}
+
+/* 1、标签选择器 */
+p{color:red;font-size:48px}
+
+/* 2、ID选择器 */
+#gsxl{font-size:24px}
+
+/* 3、类选择器 */
+.class{color:red;font-size:48px}
+
+/* 4、整体替换 */
+* {color:#A8A8A8;}
+
+/* 组合 */
+/* 5、后代选择器 空格*/
+#divid p{color: #66cc66}
+
+/* 6、下级选择器 > */
+#divid >p{color: #167F92}
+
+/* 7、毗邻选择器 + */
+#div1+p{color: chartreuse;}
+
+/* 8、(弟弟)同级选择器 ~ */
+#div1~p{color: red;}
+
+/* 9、属性选择器 */
+[res] {color: yellow}
+
+/* 10、分组选择器 */
+#d1,p,div{color: blueviolet}
+
+/* 11、嵌套选择器 */
+div+h4{color: coral}
+
+/* 12、其他使用 */
+[ret="gs"] {color: #024457}

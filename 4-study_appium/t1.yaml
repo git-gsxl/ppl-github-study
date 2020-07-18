@@ -1,0 +1,22 @@
+Mypage:
+# 数字转字符串前面加：!!sta
+  locators:
+    -
+     - 数字转字符串:
+        name: admin
+        pwd: !!str 123456
+    -
+     - list:
+       - admin11
+       - admin2
+    -
+     list嵌套字典:
+      - name: admin
+      - pwd: !!str 123456
+    -
+     - 纯量:
+       admin: !!str 123456
+       qqqqq: 2018-10-08 23:11
+       fffff: false
+       ttttt: true
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器示例</title>
+    <style>
+        /*a:link 链接未被点击过过的颜色 */
+        a:link {
+            color: #66cc66;}
+
+        /*a:visited 链接被点击过过的颜色 */
+        a:visited {
+            color: #cc0000;}
+
+        /*a:hover 鼠标移上去的颜色 */
+        a:hover {color: #cc6600}
+        #d1:hover {color: #cc0000}
+
+        /* a:active 选中时的颜色   */
+        #d1:active {color: deeppink}
+
+        /* 输入框聚焦时底色 */
+        input:focus{
+            outline: #cc0000;
+            background-color: #A8A8A8;}
+
+        /* 首字符设置特殊样式 */
+        p:first-letter{
+            font-size: 48px;
+            color: darkred}
+
+        /* 在内容前面加内容 */
+        .str:before{
+            content: ">>";
+            color: #cc0000;}
+
+        /* 在str类行字符后面加入字符 */
+        .str:after{content: "[?]";
+        color: #5495E6}
+    </style>
+</head>
+<body>
+<div id="d1">我是div的标签</div>
+<a href="https://www.cnblogs.com/gsxl/">博客园</a>
+<a href="https://www.baidu.com/">百度</a>
+<a href="https://www.sohu.com/">搜狐</a>
+<input type="text" name="" id="">
+<p>我是一个小小的石头，我是一个小小的石头，我是一个小小的石头，我是一个小小的石头</p>
+<p>我是一个小小的石头，我是一个小小的石头，我是一个小小的石头</p>
+<p>我是一个小小的石头，我是一个小小的石头</p>
+<p>我是一个小小的石头</p>
+<p class="str">我是一个小小的石头</p>
+<p class="str">我是一个小小的石头</p>
+</body>
+</html>

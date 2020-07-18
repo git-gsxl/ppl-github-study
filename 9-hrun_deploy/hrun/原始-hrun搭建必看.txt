@@ -1,0 +1,89 @@
+最新版安装：直接运行install.sh文件，安装完mysql就要创建hrun库名，然后上传hrun.zip包至目录：hrun_django
+
+# 旧版：
+1.先把所需文件传输到服务器上；
+
+2.运行脚本install.sh，会部署好docker、mysql5.7、shipyard UI；
+
+3.根据 pyt_make.text 提示文件来安装；
+
+
+注意：所用的端口需要设置开端口后，外网才能正常访问
+
+
+======== 以下是安装手册 ========
+
+# 注意：所用的端口需要设置开端口
+
+# ==== python3 安装 ====
+
+# 1.先安装环境需要，再创建目录
+yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel mysql-devel
+mkdir /root/python36
+
+# 下载，在此目录/root/python36运行
+# 2.wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz 不用此方法，用我们Windows下载然后传过来
+# 3.请将Python-3.6.8.tgz下载完在目录/root/python36运行
+tar -xvf Python-3.6.8.tgz
+
+# 4.解压后 进入目录Python-3.6.8
+cd Python-3.6.8
+./configure --prefix=/root/python36
+
+# 5.输入make等待完成后，输入make install进行安装
+make
+make install
+
+# 6.添加python3、pip3软链接，完成后验证下，python3 -V 和 pip3 -V
+# pip3更新最新版：
+ln -s /root/python36/bin/python3.6 /usr/bin/python3
+ln -s /root/python36/bin/pip3 /usr/bin/pip3
+pip3 install --upgrade pip
+
+# ==== django hrun项目设置安装 ====
+# 1.脚本已经自动mkdir
+# 手动输入： cd /root/hrun_django/
+
+# 2.将httprunnermanger_web上传至该目录
+# 上传完后解压：zip httprunnermanger_web.zip
+
+# 3.pip运行文件requirements.txt安装所需文件
+pip3 install -r requirements.txt
+
+# 4.编辑settings.py,需修改的地方有 4 个：新建数据库名, 数据库密码，HOST 地址，监吩端口 PORT
+cd HttpRunnerManager/
+vi settings.py
+
+	if DEBUG:
+	DATABASES = {
+	'default': {
+	'ENGINE': 'django.db.backends.mysql',
+	'NAME': 'hrun', # 新建数据库名
+	'USER': 'root', # 数据库登录名
+	'PASSWORD': '123456', # 数据库登录密码
+	'HOST': '47.104.190.xx', # 数据库所在服务器 ip 地址
+	'PORT': '3309', # 监吩端口 默认 3306 即可
+	} }
+	
+# 5.navicat 上新建一个数据库名称：hrun,设置字符集 utf-8 # utf8 -- UTF-8 Unicode/utf8_general_ci
+
+# 6.在httprunnermanger_web目录下，同步数据库
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+# 7.创建管理员账号，输入账号、密码即可，访问：host+端口/admin 如：http://127.0.0.1:8000/admin/
+python3 manage.py createsuperuser
+
+# 8.启劢 django 服务，默认端口为：8000，访问：host+端口/api/register/ 如：http://localhost:8000/api/register/
+python3 manage.py runserver 0.0.0.0:8000
+
+# 9.后台启劢 django，先杀掉进程
+cd /root/hrun_django/httprunnermanger_web
+ps -aux | grep python|xargs kill -9
+
+# 10.指定django日志目录输出，动态查看日志：tali -f djo.out
+nohup python3 manage.py runserver 0.0.0.0:8000 >djo.out 2>&1 &
+
+# 11.添加hrun软连接
+ln -s /root/python36/bin/hrun /usr/bin/hrun
+hrun -V

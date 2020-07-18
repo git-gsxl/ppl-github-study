@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位示例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 150px
+        }
+
+        .c1, .c2, .c3 {
+            width: 150px;
+            height: 150px;
+        }
+
+        .c1 {
+            background-color: #cc0000
+        }
+
+        /* relative：相对定位*/
+        .c2 {
+            background-color: #66cc66;
+            position: relative;
+            top: 150px;
+            left: 300px
+        }
+
+        /* absolute：绝对定位*/
+        .c3 {
+            background-color: rosybrown;
+            position: absolute;
+            left: 150px;
+            top: 150px
+        }
+
+        /* fixed：固定位置 */
+        .c4 {
+            position: fixed;
+            bottom: 100px;
+            right: 120px;
+            background-color: #1f96e0;
+            line-height: 25px
+        }
+    </style>
+</head>
+<body>
+<div class="c1">c1</div>
+<div class="c2">c2</div>
+<div>
+    <div class="c3">c3</div>
+</div>
+<div class="c4">返回顶部</div>
+</body>
+</html>

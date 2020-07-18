@@ -1,0 +1,45 @@
+/*背景颜色*/
+.c1 {height: 5px; background-color: red;}
+
+/*背景图片*/
+.c2 {height: 5px; background: url("1.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%}
+ /*背景重复*/
+ /*repeat(默认):背景图片平铺排满整个网页*/
+ /*repeat-x：背景图片只在水平方向上平铺*/
+ /*repeat-y：背景图片只在垂直方向上平铺*/
+ /*no-repeat：背景图片不平铺*/
+ /*ackground-position: 50% 50%   图片居中*/
+
+/* 3、边框
+ 默认写法：border: 10px green solid;*/
+.c2 {
+    height: 50px;
+    width: 30px;
+    background-color: black;
+    border-width: 10px;
+    border-color: green;
+    border-style: solid;
+}
+
+/*右边框*/
+.c3 {height: 200px;background-color: coral;
+    border-right: 10px solid green;
+}
+
+/*4、控制展示顺序*/
+ul {
+    list-style-type: none;}
+li {display: inline;
+    padding: 5px;
+    /*border-right: 1px solid red;*/
+}
+li.s1 {border: none }
+
+/*CSS盒子模型*/
+.test {
+  margin: 5px 10px 15px 20px;}
+
+li>a {border-right: 1px solid green;
+    padding-right: 15px}

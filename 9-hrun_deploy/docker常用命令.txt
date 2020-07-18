@@ -1,0 +1,40 @@
+
+# 1.docker常用命令：
+
+# 查看docker版本：docker version
+
+# 查看已下载的镜像：docker images
+
+# 搜索某个镜像：  docker search xxx
+
+# 重启docker服务：systemctl enable docker.service
+
+# 重启某个容器：  docker restart xxx
+
+# 2.进入python3.6调试
+docker run -i -t centos/python-36-centos7 /bin/bash
+python
+pip show pip
+pip install --upgrade pip
+
+3.# 说明：重启服务器后，可能需要重启docker服务
+
+-t:在新容器内指定一个伪终端或终端。
+
+-i:允许你对容器内的标准输入 (STDIN) 进行交互。
+
+-d:让容器在后台运行。
+
+-P:将容器内部使用的网络端口映射到我们使用的主机上。
+
+# 4.卸载docker
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine

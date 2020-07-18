@@ -1,0 +1,24 @@
+qitaMypage:
+  desc: 登录模块
+  locators:
+# 数字转字符串前面加：!!sta
+  -
+    name: qita_分类按钮
+    by: id
+    value: com.taobao.taobao:id/tab_title
+  -
+    name: qita_点击_我的淘宝
+    by: desc
+    value: 我的淘宝
+
+  desc: 订单模块
+  locators:
+# 数字转字符串前面加：!!sta
+  -
+    name: qita_删除订单
+    by: xpath
+    value: com.taobao.taobao:id/tab_title
+  -
+    name: qita_提交订单
+    by: desc
+    value: 提交

@@ -1,0 +1,56 @@
+﻿#####   一般元素定位方法：
+
+# 1、id 定位
+driver.find_element_by_id('id元素值').click()
+
+# 2、xpath定位
+driver.find_element_by_xpath('//*[@text="text元素值"]')
+
+# 3、content_desc定位
+driver.find_element_by_accessibility_id('content_desc元素值').click()
+
+# 4、class定位
+driver.find_element_by_class_name('class元素值') .click()
+
+# 5、list定位  可以组合上述几种使用
+driver.find_element_by_class_name('class元素值')[0].click()
+
+driver.find_element_by_id('xxx元素值')[0].click()
+
+
+##########  高级定位方法
+
+# 6、uiautomator定位  可以组合
+user_name = 'text("text元素值")'
+driver.find_element_by_android_uiautomator(user_name).click
+# textContains("text元素值")   #包含 text元素值
+
+# 7、resourceid定位
+log_input = 'resourceID("resourceid元素值")'
+driver.find_element_by_android_uiautomator(log_input).click
+
+# 8、class Name定位
+log_input = 'class Name(class元素值)'
+driver.find_element_by_android_uiautomator(log_input).click
+
+# 9、description定位
+log_input = 'description("content_desc元素值")'
+driver.find_element_by_android_uiautomator(log_input).click
+
+# 10、calss Name定位
+
+log_input = 'calss Name("class元素值")'
+
+# 任意组合
+class_test = 'class Name(class元素值).text("text元素值")'
+driver.find_element_by_android_uiautomator(class_test).click()
+
+
+# 父级定位
+log_input = 'resourceID("resourceid元素值").childSelector(text("text元素值"))'
+driver.find_element_by_android_uiautomator(log_input).click()
+
+# 兄弟定位
+log_input = 'resourceID("resourceid元素值").fromParent(text("text元素值"))'
+driver.find_element_by_android_uiautomator(log_input).click()
+

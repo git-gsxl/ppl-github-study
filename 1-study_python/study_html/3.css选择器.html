@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>css文件导入</title>
+    <!--    <link rel="stylesheet" href="3.css样式.css">-->
+    <link rel="stylesheet" href="3.css样式.css">
+
+<!--  ^：匹配xx开头；
+      $：匹配xx结尾
+-->
+<!--    <style>[ret^="gs"]{color: #66cc66}</style>-->
+<!--    <style>[ret$="xl"]{color: #66cc66}</style>-->
+</head>
+<body>
+
+<!-- 1、标签选择 -->
+<div>
+    <p>pppp标签</p>
+    <div>
+        <p>啪啪啪啪啪啪</p>
+    </div>
+</div>
+<p>我也是pppp</p>
+
+<!-- 2、ID选择器 -->
+<div id="gsxl">
+    <p>哈哈哈抓不到我吧，没有办法</p>
+    <h6>我是一个h6</h6>
+</div>
+
+<!-- 3、类选择器 -->
+<div class="haha">累呀
+    <p class="haha">累呀累呀累呀累呀</p>
+</div>
+<p class="haha">累呀累呀</p>
+
+<!-- 4、整体替换 -->
+<div>
+    <p>666</p>
+    <div>整体替换？？？</div>
+</div>
+
+<!--  6、儿子选择器  -->
+<div id="divid">
+    <p>我是儿子1,也就是嵌套在div第一层的标签</p>
+    <div>
+
+<!--  5、后代选择器     -->
+        <p>我是嵌套在div第二层中的P标签</p>
+        <div>我是嵌套在div中的span标签</div>
+    </div>
+    <p>我是儿子2</p>
+</div>
+
+<!-- 7、毗邻选择器-->
+<div id="div1">我是毗邻</div>
+<p>我是毗邻1</p>
+
+<!-- 8、同级选择器-->
+<p>111</p>
+<p>222</p>
+<p>333</p>
+
+<!-- 9、属性选择器 -->
+<div res="gsxl">小石头</div>
+<p res="gsxl">大石头</p>
+
+<!-- 10、分组选择器-->
+<div id="d1">
+    <p>666</p>
+    <div class="c6">整体替换？？？</div>
+</div>
+
+<!-- 11、嵌套选择器-->
+<div id="d2"></div>
+<h4>p4444</h4>
+
+<!-- 12、其他使用-->
+<p ret="gs">哈哈哈抓不到我吧</p>
+<p ret="gsxl">哈哈哈抓不到我吧111</p>
+<p ret="hahxl">哈哈哈抓不到我吧222</p>
+
+</body>
+</html>
