@@ -18,4 +18,8 @@
 
 9-hrun_deploy：httprunner简单搭建及学习
 
+10-hrun_deploy：httprunner简单搭建及学习
+
 个人博客：https://www.cnblogs.com/gsxl/
+
+主题：pycharm 的 File -> Settings -> Plugins，搜索Material Theme UI 并安装。

@@ -1,0 +1,69 @@
+{
+  "uid" : "38d37e1764d49209",
+  "name" : "test_login",
+  "fullName" : "test_login.Test_login#test_login",
+  "historyId" : "68d522d50c7673392602716b80da220a",
+  "time" : {
+    "start" : 1589076945995,
+    "stop" : 1589076946257,
+    "duration" : 262
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "c8ab700384a5ac27",
+      "name" : "stdout",
+      "source" : "c8ab700384a5ac27.txt",
+      "type" : "text/plain",
+      "size" : 18723
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_login"
+  }, {
+    "name" : "host",
+    "value" : "PC-201905251350"
+  }, {
+    "name" : "thread",
+    "value" : "2848-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "38d37e1764d49209.json",
+  "parameterValues" : [ ]
+}

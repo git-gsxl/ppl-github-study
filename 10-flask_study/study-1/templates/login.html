@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<form action="" method="POST">
+    <p>{{ biaoti }}</p>
+    <input type="text" name="username">
+    <input type="text" name="password">
+    <input type="submit" value="提交">
+    <br>
+    <p>获取json的您：{{ id }}</p>
+    <p>获取嵌套的您：{{ id.name }}</p>
+
+    {#  用来执行函数或者代码逻辑
+     跳转后是这样：http://127.0.0.1:5000/profile/?name=gsxl   #}
+    <p><a href="{{url_for('profile',name='gsxl')}}">登录</a></p>
+
+    {#  过滤器能二次处理数据，如：绝对值abs  #}
+    <p>绝对值为：{{ num|abs }}</p>
+
+    {#  过滤器默认值，为空使用默认值，否则用真实值  #}
+    <p>个性签名：{{ qianming|default('懒人第一，什么也没留下。', boolean=True) }}</p>
+
+    <p>第二个个性签名：{{ qianming or '懒人第一，什么也没留下。' }}</p>
+
+</form>
+</body>
+</html>

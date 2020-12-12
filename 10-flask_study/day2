@@ -1,0 +1,17 @@
+二、认识web
+
+1、URL是Uniform Resource Locator的简写，统一资源定位符。
+
+2、一个URL由以下几部分组成：scheme://host:port/path/?query-string=xxx#anchor
+详解：
+	* scheme：代表的是访问的协议，一般为http或者https以及ftp等。
+	* host：主机名，域名，比如www.baidu.com。
+	* port：端口号。当你访问一个网站的时候，浏览器默认使用80端口，https默认443端口。
+	* path：查找路径。比如：https://www.cnblogs.com/gsxl/，后面的gsxl/就是path。
+	* query-string：查询字符串，比如：www.baidu.com/s?wd=广深小龙，后面的wd=广深小龙就是查询字符串。
+	* anchor：锚点，后端一般不用管，前端用来做当前页面定位。比如：https://baike.baidu.com/item/%E6%9D%A8%E8%B6%85%E8%B6%8A/9686500?fr=aladdin#1
+
+3、web服务及应用框架：
+    ①web服务器：负责处理http请求，响应静态文件，常见的有Apache，Nginx以及微软的IIS.
+    ②应用服务器：负责处理逻辑的服务器。常见的应用服务器有uwsgi、tomcat等。
+    ③web应用框架：常用的web功能的框架就是web应用框架，flask、Django以及Java中的SSH(Structs2+Spring3+Hibernate3)框架都是web应用框架。

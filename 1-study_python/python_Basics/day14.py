@@ -283,15 +283,15 @@ import time
 
 
 # 二、内置函数
-list= [1, 2, 3, -4, 5, 6]
-
-def func(no):
-    return no>4
-
-ret = map(abs, list)
-print(ret)
-for i in ret:
-    print(i)
+# list= [1, 2, 3, -4, 5, 6]
+#
+# def func(no):
+#     return no>4
+#
+# ret = map(abs, list)
+# print(ret)
+# for i in ret:
+#     print(i)
 
 
 
@@ -311,6 +311,6 @@ for i in ret:
 
 # min,max,map,filter,sorted 这五个可以和 lambda 组合，如：
 # 将ret元组打印出来为：[{'a':'c','b':'d'}]
-ret = zip((('a'),('b')),(('1'),('2')))
-res = map(lambda tp:{tp[0]:tp[1]}, ret)
-print(list(res))
+# ret = zip((('a'),('b')),(('1'),('2')))
+# res = map(lambda tp:{tp[0]:tp[1]}, ret)
+# print(list(res))

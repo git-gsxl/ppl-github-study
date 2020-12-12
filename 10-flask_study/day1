@@ -1,0 +1,20 @@
+一、环境安装:
+
+1、python3的版本安装：https://www.python.org/downloads/windows/
+
+2、Pycharm软件(下载专业版的)：
+    ①下载地址：https://www.jetbrains.com/pycharm/download/#section=windows
+    ②破解码：http://lookdiv.com/
+
+3、安装虚拟环境(推荐使用虚拟环境)：
+    ①mac：pip install virtualenv
+    ②win：pip install virtualenvwrapper-win
+    ③虚拟环境命令
+        ①创建虚拟环境：mkvirtualenv 虚拟环境名称
+        ②进入虚拟环境：workon 虚拟环境名称
+        ③删除虚拟环境：rmvirtualenv 虚拟环境名称
+        ④退出当前虚拟环境：deactivate
+        ⑤列出虚拟环境列表：workon
+    ④安装flask：pip install flask
+
+4、pycharm关联虚拟环境目录：c:\users\administrator\envs\
