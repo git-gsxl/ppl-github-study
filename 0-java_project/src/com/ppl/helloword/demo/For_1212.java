@@ -7,7 +7,6 @@ package com.ppl.helloword.demo;
 
 public class For_1212 {
     public static void main(String[] args) {
-<<<<<<< HEAD
         int j_num = 0;
         int o_num = 0;
         int res_num = 0;
@@ -34,15 +33,14 @@ public class For_1212 {
         while (true) {
             age += 1;
             System.out.println(age);
-            if (age == 3){
+            if (age == 3) {
                 System.out.println("break");
                 break;
             }
-=======
-        int num = 5;
-        for (int i = 1; i <= num; i++) {
-            System.out.println(i);
->>>>>>> 2ab2a4da97f2091c94315cc333fd974970550183
+            int num = 5;
+            for (int i = 1; i <= num; i++) {
+                System.out.println(i);
+            }
         }
     }
 }
